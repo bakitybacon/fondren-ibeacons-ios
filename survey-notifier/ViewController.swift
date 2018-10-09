@@ -5,7 +5,7 @@
 //  Created by UX Train on 10/9/18.
 //  Copyright © 2018 UX Train. All rights reserved.
 //
-
+import EstimoteProximitySDK
 import UIKit
 
 class ViewController: UIViewController {

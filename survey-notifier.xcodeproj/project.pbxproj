@@ -14,6 +14,10 @@
 		61BAC346216D501400B92B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61BAC344216D501400B92B9B /* LaunchScreen.storyboard */; };
 		61BAC351216D501400B92B9B /* survey_notifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BAC350216D501400B92B9B /* survey_notifierTests.swift */; };
 		61BAC35C216D501400B92B9B /* survey_notifierUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BAC35B216D501400B92B9B /* survey_notifierUITests.swift */; };
+		61BAC36A216D522C00B92B9B /* EstimoteProximitySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61BAC369216D522C00B92B9B /* EstimoteProximitySDK.framework */; };
+		61BAC36B216D522C00B92B9B /* EstimoteProximitySDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61BAC369216D522C00B92B9B /* EstimoteProximitySDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		61BAC36E216D523700B92B9B /* EstimoteBluetoothScanning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61BAC36D216D523700B92B9B /* EstimoteBluetoothScanning.framework */; };
+		61BAC36F216D523700B92B9B /* EstimoteBluetoothScanning.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61BAC36D216D523700B92B9B /* EstimoteBluetoothScanning.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		61BAC36C216D522C00B92B9B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				61BAC36F216D523700B92B9B /* EstimoteBluetoothScanning.framework in Embed Frameworks */,
+				61BAC36B216D522C00B92B9B /* EstimoteProximitySDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		61BAC338216D501300B92B9B /* survey-notifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "survey-notifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61BAC33B216D501300B92B9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +66,8 @@
 		61BAC357216D501400B92B9B /* survey-notifierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "survey-notifierUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61BAC35B216D501400B92B9B /* survey_notifierUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = survey_notifierUITests.swift; sourceTree = "<group>"; };
 		61BAC35D216D501400B92B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61BAC369216D522C00B92B9B /* EstimoteProximitySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteProximitySDK.framework; sourceTree = "<group>"; };
+		61BAC36D216D523700B92B9B /* EstimoteBluetoothScanning.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteBluetoothScanning.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61BAC36E216D523700B92B9B /* EstimoteBluetoothScanning.framework in Frameworks */,
+				61BAC36A216D522C00B92B9B /* EstimoteProximitySDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +100,8 @@
 		61BAC32F216D501300B92B9B = {
 			isa = PBXGroup;
 			children = (
+				61BAC36D216D523700B92B9B /* EstimoteBluetoothScanning.framework */,
+				61BAC369216D522C00B92B9B /* EstimoteProximitySDK.framework */,
 				61BAC33A216D501300B92B9B /* survey-notifier */,
 				61BAC34F216D501400B92B9B /* survey-notifierTests */,
 				61BAC35A216D501400B92B9B /* survey-notifierUITests */,
@@ -135,6 +160,7 @@
 				61BAC334216D501300B92B9B /* Sources */,
 				61BAC335216D501300B92B9B /* Frameworks */,
 				61BAC336216D501300B92B9B /* Resources */,
+				61BAC36C216D522C00B92B9B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -431,8 +457,13 @@
 		61BAC361216D501400B92B9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "survey-notifier/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,8 +479,13 @@
 		61BAC362216D501400B92B9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "survey-notifier/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
