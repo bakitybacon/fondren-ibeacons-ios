@@ -106,5 +106,6 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                 UIApplication.shared.openURL(url)
             }
         }
+        completionHandler()
     }
 }
