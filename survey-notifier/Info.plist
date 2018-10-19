@@ -28,6 +28,10 @@
 	<string>Necessary for interacting with iBeacons</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Necessary for interacting with iBeacons</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
